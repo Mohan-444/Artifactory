@@ -27,7 +27,7 @@ jobs:
             - name: download the artifcat
               uses: actions/download-artifact@v4
               with:
-                name: artifacts
+                name: artifcats
             - name: dispaly contents
               run: cat artifcatory/art.txt
 
