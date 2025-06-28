@@ -16,7 +16,7 @@ jobs:
             - name: create a file
               run: touch art.txt
             - name: write content 
-              run: echo "hello, learning artifsctory"
+              run: echo "hello, learning artifsctory" >>art.txt
             - name: upload the artifcatory
               uses: actions/upload-artifact@v4
               with:
