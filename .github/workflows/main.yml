@@ -14,10 +14,20 @@ jobs:
             - name: create a file
               run: touch artifactory/art.txt
             - name: write content 
-              run: echo "hello, learning artifsctory" >artifactory/art.txtart.txt
+              run: echo "hello, learning artifactory" >artifactory/art.txtart.txt
             - name: upload the artifcatory
               uses: actions/upload-artifact@v4
               with:
                 name: artifcats
                 path: artifactory/art.txt
-        
+    downloadartifcats:
+        name: download artficat
+        runs-on: ubuntu-lates
+        steps:
+            - name: download the artifcat
+              uses: actions/download-artifact@v4
+              with:
+                name: artifacts
+            - name: dispaly contents
+              run: cat artifcats/art.txt
+
