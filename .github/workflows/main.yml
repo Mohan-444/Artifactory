@@ -10,11 +10,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: create a directory
-              run: mkdir artifactory1
-            - name: change directory
-              run: cd artifactory1
+              run: mkdir artifactory
             - name: create a file
-              run: touch art.txt
+              run: touch artifactory/art.txt
             - name: write content 
               run: echo "hello, learning artifsctory" >>art.txt
             - name: upload the artifcatory
