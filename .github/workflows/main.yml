@@ -11,6 +11,8 @@ jobs:
         steps:
             - name: create a directory
               run: mkdir artifactory1
+            - name: change directory
+              run: cd artifactory1
             - name: create a file
               run: touch art.txt
             - name: write content 
