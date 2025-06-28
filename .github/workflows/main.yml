@@ -22,12 +22,13 @@ jobs:
                 path: artifactory/art.txt
     downloadartifcats:
         name: download artficat
-        runs-on: ubuntu-lates
+        runs-on: ubuntu-latest
+        needs: uploadartifacts
         steps:
             - name: download the artifcat
               uses: actions/download-artifact@v4
               with:
                 name: artifcats
             - name: dispaly contents
-              run: cat artifcatory/art.txt
+              run: cat artifactory/art.txt
 
