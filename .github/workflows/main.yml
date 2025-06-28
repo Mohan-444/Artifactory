@@ -29,5 +29,5 @@ jobs:
               with:
                 name: artifacts
             - name: dispaly contents
-              run: cat artifcats/art.txt
+              run: cat artifcatory/art.txt
 
