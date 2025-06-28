@@ -7,7 +7,7 @@ on:
 jobs:
     uploadartifacts:
         name: upload artifactiry
-        run-on: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: create a directory
               run: mkdir artifactory1
