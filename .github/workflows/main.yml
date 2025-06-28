@@ -12,12 +12,12 @@ jobs:
             - name: create a directory
               run: mkdir artifactory
             - name: create a file
-              run: touch artifactory1/art.txt
+              run: touch artifactory/art.txt
             - name: write content 
-              run: echo "hello, learning artifsctory" >artifactory1/art.txtart.txt
+              run: echo "hello, learning artifsctory" >artifactory/art.txtart.txt
             - name: upload the artifcatory
               uses: actions/upload-artifact@v4
               with:
                 name: artifcats
-                path: artifactory1/art.txt
+                path: artifactory/art.txt
         
