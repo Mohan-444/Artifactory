@@ -1,0 +1,22 @@
+name: artifactory
+
+on:
+    push:
+        branches:
+            - main
+Job:
+    name: upload artifactiry
+    run-on: ubuntu-latest
+    Steps:
+        - name: create a directory
+          run: mkdir artifactory1
+        - name: create a file
+          run: touch art.txt
+        - name: write content 
+          run: echo "hello, learning artifsctory"
+        - name: upload the artifcatory
+          uses: actions/upload-artifact@v4
+            with:   
+                name: artifcats
+                path: artifactory1/art.txt
+        
